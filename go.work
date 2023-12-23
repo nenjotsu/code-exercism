@@ -3,6 +3,7 @@ go 1.21.5
 use (
 	./go/animal-magic
 	./go/annalyns-infiltration
+	./go/bird-watcher
 	./go/blackjack
 	./go/card-tricks
 	./go/cars-assemble

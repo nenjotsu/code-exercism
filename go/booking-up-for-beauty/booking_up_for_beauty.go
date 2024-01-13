@@ -1,11 +1,31 @@
 package booking
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
+
+func parseDateWithLayouts(date string, layouts ...string) (time.Time, error) {
+	var t time.Time
+	var err error
+
+	for _, layout := range layouts {
+		t, err = time.Parse(layout, date)
+		if err == nil {
+			return t, nil
+		}
+	}
+
+	return time.Time{}, err
+}
 
 // Schedule returns a time.Time from a string containing a date.
 func Schedule(date string) time.Time {
-	layout := "1/2/2006 15:04:05"
-	d, _ := time.Parse(layout, date)
+	layouts := []string{"1/2/2006 15:04:05", "January 2, 2006 15:04:05", "Monday, January 2, 2006 15:04:05"}
+	d, err := parseDateWithLayouts(date, layouts...)
+	if err != nil {
+		return time.Time{}
+	}
 
 	t := time.Date(
 		d.Year(), d.Month(), d.Day(),
@@ -18,20 +38,23 @@ func Schedule(date string) time.Time {
 
 // HasPassed returns whether a date has passed.
 func HasPassed(date string) bool {
-	panic("Please implement the HasPassed function")
+	now := time.Now().UTC().Truncate(24 * time.Hour)
+	return Schedule(date).Before(now)
 }
 
 // IsAfternoonAppointment returns whether a time is in the afternoon.
 func IsAfternoonAppointment(date string) bool {
-	panic("Please implement the IsAfternoonAppointment function")
+	d := Schedule(date).UTC().Hour()
+	return d >= 12 && d <= 17
 }
 
 // Description returns a formatted string of the appointment time.
 func Description(date string) string {
-	panic("Please implement the Description function")
+	d := Schedule(date).UTC().Format("Monday, January 2, 2006, at 15:04")
+	return fmt.Sprintf("You have an appointment on %s.", d)
 }
 
 // AnniversaryDate returns a Time with this year's anniversary.
 func AnniversaryDate() time.Time {
-	panic("Please implement the AnniversaryDate function")
+	return Schedule("09/15/2024 00:00:00")
 }

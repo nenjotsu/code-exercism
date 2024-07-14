@@ -105,3 +105,5 @@ dist
 
 rust/*/target/**
 rust/*/Cargo.lock
+
+cpp/**/build

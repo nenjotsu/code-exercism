@@ -107,3 +107,5 @@ rust/*/target/**
 rust/*/Cargo.lock
 
 cpp/**/build
+tempCodeRunnerFile
+cpp/exercises/swap_values

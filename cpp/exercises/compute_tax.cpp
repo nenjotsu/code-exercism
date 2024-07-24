@@ -7,5 +7,6 @@ int main() {
   double totalTax = stateTax + countyTax;
   double total = sales - (sales * totalTax);
   std::cout << total << std::endl;
+  
   return 0;
 }

@@ -110,3 +110,6 @@ cpp/**/build
 tempCodeRunnerFile
 cpp/exercises/swap_values
 cpp/exercises/compute_tax
+
+cpp/**/output/**
+cpp/exercises/if_statements

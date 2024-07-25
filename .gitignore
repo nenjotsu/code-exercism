@@ -113,3 +113,4 @@ cpp/exercises/compute_tax
 
 cpp/**/output/**
 cpp/exercises/if_statements
+cpp/exercises/bubble_sort

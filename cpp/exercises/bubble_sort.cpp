@@ -13,7 +13,7 @@ int main() {
       }
     }
   }
-  for (int e : arr) {
+  for (int e: arr) {
     cout << e << " ";
   }
   cout << '\n';

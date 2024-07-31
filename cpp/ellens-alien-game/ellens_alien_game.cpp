@@ -14,12 +14,14 @@ namespace targets {
       bool is_alive() {
         return health > 0;
       }
-      void hit() {
-        health--;
+      bool hit() {
+        health-=1;
+        return true;
       }
-      void teleport(int x, int y) {
+      bool teleport(int x, int y) {
         x_coordinate = x;
         y_coordinate = y;
+        return true;
       }
       bool collision_detection(Alien a) {
         return a.x_coordinate == x_coordinate && a.y_coordinate == y_coordinate;
@@ -31,7 +33,3 @@ namespace targets {
   };
 
 }  // namespace targets
-
-int main() {
-  return 0;
-}

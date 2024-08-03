@@ -4,8 +4,12 @@
 
 // Round down all provided student scores.
 std::vector<int> round_down_scores(std::vector<double> student_scores) {
-    // TODO: Implement round_down_scores
-    return {};
+    std::vector<int> student_scores_int;
+    for (int i = 0; i < student_scores.size(); i++)
+    {
+      student_scores_int[i] = (int)student_scores[i];
+    }
+    return student_scores_int;
 }
 
 

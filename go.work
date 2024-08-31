@@ -19,4 +19,5 @@ use (
 	./go/vehicle-purchase
 	./go/weather-forecast
 	./go/welcome-to-tech-palace
+	./go/websocket
 )

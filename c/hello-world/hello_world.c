@@ -6,8 +6,3 @@ const char *hello(void)
 {
    return "Hello, World!";
 }
-
-int main(void)
-{
-   printf("%s\n", hello());
-}

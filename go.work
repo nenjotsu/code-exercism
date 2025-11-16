@@ -1,4 +1,4 @@
-go 1.22.5
+go 1.23
 
 use (
 	./go/animal-magic
@@ -14,6 +14,7 @@ use (
 	./go/gross-store
 	./go/hello-world
 	./go/interest-is-interesting
+	./go/jedliks-toys
 	./go/lasagna
 	./go/lasagna-master
 	./go/need-for-speed

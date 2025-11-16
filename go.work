@@ -10,6 +10,7 @@ use (
 	./go/card-tricks
 	./go/cars-assemble
 	./go/chessboard
+	./go/election-day
 	./go/gross-store
 	./go/hello-world
 	./go/interest-is-interesting
@@ -19,6 +20,6 @@ use (
 	./go/party-robot
 	./go/vehicle-purchase
 	./go/weather-forecast
-	./go/welcome-to-tech-palace
 	./go/websocket
+	./go/welcome-to-tech-palace
 )

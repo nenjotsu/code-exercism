@@ -59,6 +59,10 @@
   "files.associations": {
     "*.rs": "rust",
     "*.rmd": "markdown",
+    "*.js": "javascript",
+    "*.tmpl": "html",
+    "*._go": "go",
+    "*.py": "python",
     "ostream": "cpp",
     "cctype": "cpp",
     "clocale": "cpp",
@@ -123,6 +127,7 @@
     "thread": "cpp",
     "cinttypes": "cpp",
     "typeinfo": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "format": "c"
   }
 }
